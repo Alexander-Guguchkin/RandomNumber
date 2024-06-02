@@ -6,4 +6,4 @@
   <li>При необходимости ностроить поделючение к бд ("RandomNumber\config\db.php")</li>
   <li>После чего активировать миграцию (php yii migrate)</li>
 </ol>
-<p>Запуск: php yii serve</p>
+<p>Запуск - php yii serve</p>
