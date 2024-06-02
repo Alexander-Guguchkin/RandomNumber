@@ -48,7 +48,7 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                'GET api/number/generate' => 'number/generate',
+                'POST api/number/generate' => 'number/generate',
                 'GET api/number/retrieve/<id:\d+>' => 'number/retrieve',
             ],
         ],
