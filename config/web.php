@@ -48,14 +48,9 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                'POST api/number' => 'number/generate',
+                'GET api/number/generate' => 'number/generate',
                 'GET api/number/retrieve/<id:\d+>' => 'number/retrieve',
             ],
-        ],
-        'request' => [
-            'parsers' => [
-                'application/json' => 'yii\web\JsonParser',
-            ]
         ],
         
     ],

@@ -4,6 +4,8 @@ namespace app\controllers;
 
 use app\models\Number;
 use yii\rest\ActiveController;
+use Yii;
+use \yii\web\Response;
 
 class NumberController extends ActiveController
 {
@@ -16,7 +18,9 @@ class NumberController extends ActiveController
         $model->save();
     }
     public function actionRetrieve($id){
-        $model = Number::find($id);
-        return $this->render('index', ['model' => $model]);
+        $model = Number::findOne($id);
+        $response = Yii::$app->response;
+        $response->format = Response::FORMAT_JSON;
+        $response->data = ['message'=> $model];
     }
 }
