@@ -13,7 +13,6 @@ class NumberController extends ActiveController
     public function actionGenerate()
     {
         $model = new Number();
-        $model->id = uniqid();
         $model->value = mt_rand(1, 1000);
         $model->save();
     }
